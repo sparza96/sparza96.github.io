@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan Esparza | Python GIS Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f4f8;
+            color: #1a2a3a;
+            line-height: 1.6;
+        }
+        .hero {
+            background: linear-gradient(135deg, #0b3b2f 0%, #1b5e3f 100%);
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        .badge {
+            display: inline-block;
+            background: #ffc107;
+            color: #1a472a;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #1b5e3f;
+            margin-bottom: 25px;
+            border-left: 5px solid #ffc107;
+            padding-left: 20px;
+        }
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .project-title {
+            font-size: 1.3rem;
+            color: #1b5e3f;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .tech-tag {
+            background: #e8f0ea;
+            color: #1b5e3f;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin: 5px 5px 0 0;
+        }
+        .btn {
+            display: inline-block;
+            background: #1b5e3f;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-top: 15px;
+            margin-right: 10px;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .skill-item {
+            background: white;
+            border: 1px solid #cbd5e0;
+            padding: 6px 16px;
+            border-radius: 30px;
+        }
+        footer {
+            background: #0b2b22;
+            color: #a0c4b0;
+            text-align: center;
+            padding: 30px;
+            margin-top: 40px;
+        }
+        a {
+            color: #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>🗺️ Jordan Esparza</h1>
+        <p>Geógrafo | Python GIS Developer | Análisis Espacial & Machine Learning</p>
+        <div class="badge">🐍 10+ proyectos GIS | Portafolio profesional</div>
+    </div>
+
+    <div class="container">
+        <section>
+            <h2>📌 Sobre mí</h2>
+            <p>Geógrafo de la <strong>Universidad de Concepción (Chile)</strong>. Especializado en análisis espacial, machine learning y visualización GIS con Python. He construido más de 10 proyectos combinando mi formación profesional con desarrollo técnico.</p>
+        </section>
+
+        <section>
+            <h2>🚀 Proyectos destacados</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-title">📊 Dashboard Riesgo Territorial</div>
+                    <p>Visualización interactiva de vulnerabilidad urbana con Folium y GeoPandas.</p>
+                    <div>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">GeoPandas</span>
+                        <span class="tech-tag">Folium</span>
+                    </div>
+                    <a href="https://github.com/sparza96/jordan-gis-portfolio/blob/main/dia-19-21-dashboard-riesgo.py" class="btn">Ver código</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">🤖 ML Random Forest</div>
+                    <p>Clasificación de uso del suelo con Machine Learning espacial. Precisión >85%.</p>
+                    <div>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">GeoPandas</span>
+                        <span class="tech-tag">Matplotlib</span>
+                    </div>
+                    <a href="https://github.com/sparza96/jordan-gis-portfolio/blob/main/dia-15-16-machine-learning-espacial.py" class="btn">Ver código</a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-title">🌳 Monitoreo Forestal</div>
+                    <p>Detección de cambios de cobertura vegetal con imágenes Landsat y Rasterio.</p>
+                    <div>
+                        <span class="tech-tag">Rasterio</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">Landsat</span>
+                    </div>
+                    <a href="https://github.com/sparza96/jordan-gis-portfolio/blob/main/dia-17-18-monitoreo-forestal.py" class="btn">Ver código</a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>🛠️ Tecnologías</h2>
+            <div class="skills-list">
+                <span class="skill-item">Python</span>
+                <span class="skill-item">GeoPandas</span>
+                <span class="skill-item">Rasterio</span>
+                <span class="skill-item">Folium</span>
+                <span class="skill-item">Scikit-learn</span>
+                <span class="skill-item">PostGIS</span>
+                <span class="skill-item">QGIS</span>
+                <span class="skill-item">Git</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>📫 Contacto</h2>
+            <p><strong>GitHub:</strong> <a href="https://github.com/sparza96">github.com/sparza96</a></p>
+            <p><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/tu-perfil</a></p>
+            <p><strong>Email:</strong> jordan.esparza@udeconcepcion.cl</p>
+        </section>
+    </div>
+
+    <footer>
+        <p>🐍 Geógrafo transformando datos territoriales en decisiones con Python</p>
+        <p>Portafolio actualizado - 30 días como Python GIS Developer</p>
+    </footer>
+</body>
+</html>
