@@ -49,7 +49,7 @@
         }
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 25px;
             margin-top: 20px;
         }
@@ -58,12 +58,22 @@
             border-radius: 12px;
             padding: 20px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
         }
         .project-title {
             font-size: 1.3rem;
             color: #1b5e3f;
             margin-bottom: 10px;
             font-weight: bold;
+        }
+        .project-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin: 10px 0;
+            border: 1px solid #e2e8f0;
         }
         .tech-tag {
             background: #e8f0ea;
@@ -84,6 +94,9 @@
             font-size: 0.9rem;
             margin-top: 15px;
             margin-right: 10px;
+        }
+        .btn:hover {
+            background: #0b3b2f;
         }
         .skills-list {
             display: flex;
@@ -107,6 +120,11 @@
         a {
             color: #ffc107;
         }
+        .about-content {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+        }
     </style>
 </head>
 <body>
@@ -119,15 +137,28 @@
     <div class="container">
         <section>
             <h2>📌 Sobre mí</h2>
-            <p>Geógrafo de la <strong>Universidad de Concepción (Chile)</strong>. Especializado en análisis espacial, machine learning y visualización GIS con Python. He construido más de 10 proyectos combinando mi formación profesional con desarrollo técnico.</p>
+            <div class="about-content">
+                <p>Geógrafo de la <strong>Universidad de Concepción (Chile)</strong>. Especializado en análisis espacial, machine learning y visualización GIS con Python. He construido más de 10 proyectos combinando mi formación profesional con desarrollo técnico.</p>
+                <br>
+                <p><strong>📍 Áreas de expertise:</strong></p>
+                <ul style="margin-left: 25px; margin-top: 10px;">
+                    <li>Análisis de accesibilidad a servicios (salud, educación)</li>
+                    <li>Vulnerabilidad territorial y riesgos</li>
+                    <li>Machine Learning espacial (Random Forest)</li>
+                    <li>Monitoreo ambiental con imágenes satelitales</li>
+                    <li>Dashboards interactivos con Folium</li>
+                </ul>
+            </div>
         </section>
 
         <section>
             <h2>🚀 Proyectos destacados</h2>
             <div class="projects-grid">
+                <!-- Proyecto 1: Dashboard Riesgo -->
                 <div class="project-card">
                     <div class="project-title">📊 Dashboard Riesgo Territorial</div>
-                    <p>Visualización interactiva de vulnerabilidad urbana con Folium y GeoPandas.</p>
+                    <img src="https://raw.githubusercontent.com/sparza96/jordan-gis-portfolio/main/dia-19-21-dashboard-riesgo.png" alt="Dashboard riesgo territorial">
+                    <p>Visualización interactiva de vulnerabilidad urbana con indicadores multicriterio. Mapa web con capas seleccionables.</p>
                     <div>
                         <span class="tech-tag">Python</span>
                         <span class="tech-tag">GeoPandas</span>
@@ -136,9 +167,11 @@
                     <a href="https://github.com/sparza96/jordan-gis-portfolio/blob/main/dia-19-21-dashboard-riesgo.py" class="btn">Ver código</a>
                 </div>
 
+                <!-- Proyecto 2: ML Random Forest -->
                 <div class="project-card">
                     <div class="project-title">🤖 ML Random Forest</div>
-                    <p>Clasificación de uso del suelo con Machine Learning espacial. Precisión >85%.</p>
+                    <img src="https://raw.githubusercontent.com/sparza96/jordan-gis-portfolio/main/dia-15-16-ml-espacial.png" alt="Machine Learning espacial">
+                    <p>Clasificación de uso del suelo con Machine Learning. Precisión >85% con matriz de confusión.</p>
                     <div>
                         <span class="tech-tag">Scikit-learn</span>
                         <span class="tech-tag">GeoPandas</span>
@@ -147,9 +180,11 @@
                     <a href="https://github.com/sparza96/jordan-gis-portfolio/blob/main/dia-15-16-machine-learning-espacial.py" class="btn">Ver código</a>
                 </div>
 
+                <!-- Proyecto 3: Monitoreo Forestal -->
                 <div class="project-card">
                     <div class="project-title">🌳 Monitoreo Forestal</div>
-                    <p>Detección de cambios de cobertura vegetal con imágenes Landsat y Rasterio.</p>
+                    <img src="https://raw.githubusercontent.com/sparza96/jordan-gis-portfolio/main/dia-17-18-monitoreo-forestal.png" alt="Monitoreo forestal Landsat">
+                    <p>Detección de cambios de cobertura vegetal usando NDVI con imágenes Landsat 8 en región del Biobío.</p>
                     <div>
                         <span class="tech-tag">Rasterio</span>
                         <span class="tech-tag">NumPy</span>
@@ -161,13 +196,16 @@
         </section>
 
         <section>
-            <h2>🛠️ Tecnologías</h2>
+            <h2>🛠️ Stack Tecnológico</h2>
             <div class="skills-list">
                 <span class="skill-item">Python</span>
                 <span class="skill-item">GeoPandas</span>
+                <span class="skill-item">Shapely</span>
                 <span class="skill-item">Rasterio</span>
                 <span class="skill-item">Folium</span>
+                <span class="skill-item">Matplotlib</span>
                 <span class="skill-item">Scikit-learn</span>
+                <span class="skill-item">Pandas</span>
                 <span class="skill-item">PostGIS</span>
                 <span class="skill-item">QGIS</span>
                 <span class="skill-item">Git</span>
@@ -176,15 +214,21 @@
 
         <section>
             <h2>📫 Contacto</h2>
-            <p><strong>GitHub:</strong> <a href="https://github.com/sparza96">github.com/sparza96</a></p>
-            <p><strong>LinkedIn:</strong> <a href="#">linkedin.com/in/jsparza  </a></p>
-            <p><strong>Email:</strong> jsparza96@gmail.com</p>
+            <div class="about-content" style="text-align: center;">
+                <p>¿Buscas un Python GIS Developer para tu equipo? Hablemos.</p>
+                <br>
+                <p>
+                    <strong>GitHub:</strong> <a href="https://github.com/sparza96">github.com/sparza96</a><br>
+                    <strong>LinkedIn:</strong> <a href="#">linkedin.com/in/tu-perfil</a><br>
+                    <strong>Email:</strong> jordan.esparza@udeconcepcion.cl
+                </p>
+            </div>
         </section>
     </div>
 
     <footer>
         <p>🐍 Geógrafo transformando datos territoriales en decisiones con Python</p>
-        <p>Portafolio actualizado - 30 días como Python GIS Developer</p>
+        <p>Portafolio actualizado - Python GIS Developer</p>
     </footer>
 </body>
 </html>
